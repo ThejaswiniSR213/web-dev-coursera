@@ -4,8 +4,46 @@
 <meta charset="utf-8">
 <title>Pseudo Class Selectors</title>
 <style>
-/* Styles go here. */
+/* Styles go here. Make menu*/
+header li{
+  list-style: none; /*removes bullet points*/
+}
 
+h1{
+  text-align: center;
+}
+
+/*style links here.*/
+a:link, a:visited{
+  text-decoration: none; /*removing the underline*/
+  background-color: pink;
+  border: 1px solid orange;
+  color: black;
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+a:hover, a:active{
+  background-color: indigo;
+  color: white;
+  border: 1px solid pink;
+}
+
+header li:nth-child(3){
+  font-size: 30px;
+}
+
+section div:nth-child(odd):hover {
+  background-color: lightblue;
+  border-right: red;
+  border-left:red;
+}
+
+section div:nth-child(even):hover {
+  background-color: pink;
+}
 
 </style>
 </head>
@@ -14,13 +52,19 @@
 
 <header>
   <ul>
-    <li><a href="/">Home</a></li>
+    <li><a href="/" target="_blank">Home</a></li>
     <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
     <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
   </ul>
 </header>
 
 <section>
+  <article>
+    <p>Styling links is not as straight-forward as links have states- which can be expressed using pseudo classes</p>
+
+    <p>'a' element is a flow/phrasing content element ,i.e, it is a block level and inline element but as far as display is concerned, it is an inline element. 
+    To change it to a block level element in terms of <u><b>display</b></u> we use the property "display" with a value "block".</p>
+  </article>
   <div>DIV 1</div>
   <div>DIV 2</div>
   <div>DIV 3</div>
